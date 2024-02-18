@@ -2,6 +2,9 @@ crds:
   install: true
   keep: false
 
+createClusterRoles: true
+createAggregateRoles: true
+
 redis-ha:
   enabled: true
 
@@ -21,11 +24,11 @@ server:
       nginx.ingress.kubernetes.io/auth-tls-pass-certificate-to-upstream: "true"
     ingressClassName: nginx
     hosts:
-      - argocd.leibold.tech
+      - argocd.spof.tech
     tls:
       - secretName: argocd-certs
         hosts:
-          - argocd.leibold.tech
+          - argocd.spof.tech
     https: true
 
 repoServer:
