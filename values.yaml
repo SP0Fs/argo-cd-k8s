@@ -5,13 +5,10 @@ crds:
 createClusterRoles: true
 createAggregateRoles: true
 
-redis-ha:
-  enabled: true
-
 server:
   autoscaling:
     enabled: true
-    minReplicas: 2
+    minReplicas: 1
   ingress:
     enabled: true
     ingressClassName: nginx
@@ -29,4 +26,4 @@ server:
 repoServer:
   autoscaling:
     enabled: true
-    minReplicas: 2
+    minReplicas: 1
